@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gera Senhas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;400;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="columns  is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd">
+      <div class="column is-half is-offset-one-quarter">
+        <nav class="panel is-info">
+          <p class="panel-heading">Gerador de Senhas</p>
+          <label class="panel-block">
+            <input
+              type="checkbox"
+              name="numeral"
+              id="numeral"
+              value="false"
+              onclick="alteraCheckBox(this)"
+            />
+            Numeral
+          </label>
+          <label class="panel-block">
+            <input
+              type="checkbox"
+              name="alfabetico"
+              id="alfabetico"
+              value="false"
+              onclick="alteraCheckBox(this)"
+            />
+            Alfabetico
+          </label>
+          <label class="panel-block">
+            <input
+              type="checkbox"
+              name="maiusculas"
+              id="maiusculas"
+              value="false"
+              onclick="alteraCheckBox(this)"
+            />
+            Maiusculas
+          </label>
+          <label class="panel-block">
+            <input
+              type="checkbox"
+              name="especiais"
+              id="especiais"
+              value="false"
+              onclick="alteraCheckBox(this)"
+            />
+            Caracteres Especiais
+          </label>
+          <label class="panel-block">
+            <input
+              class="input is-rounded"
+              type="number"
+              placeholder="Quantidade de Caracteres"
+              id="qtd"
+            />
+          </label>
+          <div class="panel-block column is-half is-offset-one-quarter">
+            <div class="card">
+              <footer class="card-footer">
+                <a class="card-footer-item" onclick="gerarSenha()"
+                  >Gerar Senha</a
+                >
+                <a class="card-footer-item" onclick="limparSenhas()"
+                  >Remover Senhas</a
+                >
+              </footer>
+            </div>
+          </div>
+          <article class="list-senhas"></article>
+        </nav>
+        <article class="message is-danger is-small" style="display: none">
+          <div class="message-header">
+            <p>Atenção</p>
+          </div>
+          <div class="message-body mensagem"></div>
+        </article>
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
